@@ -68,8 +68,7 @@ entity SalesOrders : cuid, managed {
 
 
     assignedEmployee : String(10)
-    @Common.Label: '{i18n>assignedEmployee}'
-    @mandatory;
+    @Common.Label: '{i18n>assignedEmployee}';
 
 
     totalAmount      : Decimal default 0.00
