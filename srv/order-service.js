@@ -1,6 +1,6 @@
 const cds = require("@sap/cds");
 
-class SalesOrderService extends cds.ApplicationService {
+class OrderService extends cds.ApplicationService {
     async init() {
         await super.init();
 /*         this.on("CREATE", "SalesOrder", async (req) => {
@@ -8,4 +8,4 @@ class SalesOrderService extends cds.ApplicationService {
         }); */
     }
 }
-module.exports = { SalesOrderService };
+module.exports = { OrderService };
