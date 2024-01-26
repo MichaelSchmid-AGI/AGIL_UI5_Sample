@@ -15,16 +15,16 @@ namespace ch.agilita.ui5sample.db;
  */
 
 entity SalesOrders : cuid, managed {
-    salesOrder       : String(10)
+    salesOrder       : Integer
     @Common.Label: '{i18n>salesOrder}'
-    @Core.Computed;
+    @Core.Immutable;
 
 
     salesOrderDate   : Date
     @Common.Label: '{i18n>salesOrderDate}'
-    /* Input validation preventing dating back entries*/
+    /* Input validation on Date*/
     @assert.range: [
-        $now,
+        '2023-12-31',
         '9999-12-31'
     ];
 

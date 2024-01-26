@@ -1,0 +1,49 @@
+<mvc:View
+    xmlns:form="sap.ui.layout.form"
+    xmlns:launchpad="sap.ushell.ui.launchpad"
+    xmlns:core="sap.ui.core"
+    controllerName="ui5sample.controller.SalesOrder"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+        showNavButton="true"
+        navButtonPress=".onNavBack"
+    >
+        <content>
+            <HBox
+                alignItems="Center"
+                justifyContent="Center"
+                class="sapUiMediumMargin"
+                backgroundDesign="Solid"
+            >
+                <VBox
+                class="sapUiMediumMargin"
+                    width="80%"
+                    
+                  
+                >
+                    <Input enabled="false" value="{salesOrder}" />
+                    <DatePicker value="{salesOrderDate}" />
+                    <TimePicker value="{salesOrderTime}" displayFormat="HH:mm" valueFormat="HH:mm" />
+                    <Select selectedKey="{salesOrderStatus}">
+                        <core:Item key="1" text="submitted" />
+                        <core:Item key="2" text="fulfilled" />
+                        <core:Item key="3" text="shipped" />
+                    </Select>
+                    <Label text="BusinessPartner"></Label>
+                    <Input value="{businessPartner}"></Input>
+                    <Label text="VerkaufsOrg"></Label>
+                    <Input value="{salesOrg}"></Input>
+                    <Label text="Total"></Label>
+                    <Input value="{totalAmount}"></Input>
+                </VBox>
+            </HBox>
+
+            <Button press=".onDeleteButtonPress" text="Löschen" />
+        </content>
+    </Page>
+</mvc:View>

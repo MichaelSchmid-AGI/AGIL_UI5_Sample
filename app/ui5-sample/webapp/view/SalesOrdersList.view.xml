@@ -1,0 +1,34 @@
+<mvc:View xmlns:launchpad="sap.ushell.ui.launchpad" controllerName="ui5sample.controller.SalesOrdersList"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            
+            <List
+            id="SalesOrdersList"
+            items="{path:'/SalesOrders',sorter:{path:'salesOrder',descending:true}}"
+            headerText="{i18n>SalesOrders}"
+            growing="true"
+            growingThreshold="5"
+            growingScrollToLoad="true">
+            <headerToolbar>
+                <Toolbar>
+                    <Text text="{i18n>salesOrder}"
+                        width="95%"
+                        />
+                    <Button press="onCreateButtonPress" width="5%" icon="sap-icon://add-product"
+                    type="Emphasized"/>
+                </Toolbar>
+
+            </headerToolbar>
+            <StandardListItem
+                id="SalesOrderItem"
+                title="{salesOrder} | {salesOrderDate} | {businessPartner} {salesOrg}"
+                description="{businessPartner}"
+                press=".onListItemPress"
+                type="Navigation"
+                 />
+        </List>
+        </content>
+    </Page>
+</mvc:View>
