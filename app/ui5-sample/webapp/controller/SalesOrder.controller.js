@@ -14,13 +14,15 @@ sap.ui.define([
                 .attachPatternMatched(this._onRouteMatched, this);
             },
             async _onRouteMatched(oEvent){
-            let {id,query} =oEvent.getParameter("arguments")
-            this.getView().bindElement("/SalesOrders("+id+")")
+            let {id} =oEvent.getParameter("arguments")
+            /*If we want to stay basic only this is need */
+            this.getView().bindElement(`/SalesOrders(${id})`)
             },
 
             onNavBack() {
                 this.getOwnerComponent().getRouter().navTo("SalesOrdersList");
             },
+            
             onDeleteButtonPress(){
                 this.getView().getBindingContext().delete()
                 this.onNavBack();
