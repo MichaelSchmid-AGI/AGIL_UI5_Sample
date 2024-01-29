@@ -26,22 +26,9 @@ sap.ui.define(
       },
 
       onCreateButtonPress() {
-        const oBinding = this.getView()
-          .byId("SalesOrdersList")
-          .getBinding("items");
-          
-      /*We create an Object but dont navigate yet since the id wasnt created yet */
-        oBinding.attachCreateCompleted(this._onSalesOrderCreated, this);
-        oBinding.create();
-      },
-
-      /* When The Id is created we navigate */
-      _onSalesOrderCreated(oEvent) {
         this.getOwnerComponent()
-          .getRouter()
-          .navTo("SalesOrder", {
-            id: oEvent.getParameters().context.getProperty("ID"),
-          });
+        .getRouter()
+        .navTo("SalesOrder");
       },
     });
   }

@@ -107,7 +107,7 @@
         },
         {
           "name": "SalesOrder",
-          "pattern": "order/{id}:?query:",
+          "pattern": "order/:id:",
           "target": [
             "TargetSalesOrder"
           ]

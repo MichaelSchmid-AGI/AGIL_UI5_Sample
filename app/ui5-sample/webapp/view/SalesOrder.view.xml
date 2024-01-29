@@ -42,7 +42,7 @@
                     <Input value="{totalAmount}"></Input>
                 </VBox>
             </HBox>
-
+            <Button press=".onSaveButtonPress" text="Speichern" />
             <Button press=".onDeleteButtonPress" text="Löschen" />
         </content>
     </Page>

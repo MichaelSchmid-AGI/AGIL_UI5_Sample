@@ -6,7 +6,7 @@
             
             <List
             id="SalesOrdersList"
-            items="{path:'/SalesOrders',sorter:{path:'salesOrder',descending:true}}"
+            items="{path:'/SalesOrders',sorter:{path:'salesOrder',descending:true}, parameters: {$$updateGroupId : 'SalesOrderRecord'}}"
             headerText="{i18n>SalesOrders}"
             growing="true"
             growingThreshold="5"

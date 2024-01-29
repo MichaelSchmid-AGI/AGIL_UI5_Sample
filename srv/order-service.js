@@ -8,7 +8,10 @@ class OrderService extends cds.ApplicationService {
         .from(SalesOrders)
         .columns("salesOrder")
         .orderBy("salesOrder desc");
-      req.data.salesOrderDate=new Date()
+      if (!req.data?.salesOrderDate) {
+        req.data.salesOrderDate = new Date();
+      }
+
       req.data.salesOrder = (oResult?.salesOrder || 0) + 1;
     });
 
