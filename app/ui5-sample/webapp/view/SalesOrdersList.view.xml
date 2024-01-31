@@ -23,8 +23,8 @@
             </headerToolbar>
             <StandardListItem
                 id="SalesOrderItem"
-                title="{salesOrder} | {salesOrderDate} | {businessPartner} {salesOrg}"
-                description="{businessPartner}"
+                title="{salesOrder} | {salesOrg} | {description}"
+                description="{salesOrderDate} {salesOrderTime}"
                 press=".onListItemPress"
                 type="Navigation"
                  />

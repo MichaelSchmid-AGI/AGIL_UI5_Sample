@@ -27,9 +27,12 @@
                   
                 >
                     <Input enabled="false" value="{salesOrder}" />
+                    <Label text="Description"></Label>
+                    <TextArea value="{description}" />
                     <DatePicker value="{salesOrderDate}" />
                     <TimePicker value="{salesOrderTime}" displayFormat="HH:mm" valueFormat="HH:mm" />
-                    <Select selectedKey="{salesOrderStatus}">
+                    <Select selectedKey="{salesOrderStatus}"
+                    forceSelection="false">
                         <core:Item key="1" text="submitted" />
                         <core:Item key="2" text="fulfilled" />
                         <core:Item key="3" text="shipped" />

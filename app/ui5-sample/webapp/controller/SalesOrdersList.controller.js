@@ -14,7 +14,7 @@ sap.ui.define(
           .attachPatternMatched(this._onRouteMatched, this);
       },
       async _onRouteMatched(oEvent) {
-        this.getView().byId("SalesOrdersList").getBinding("items").refresh();
+        this.getView().getModel().refresh()
       },
       onListItemPress(oEvent) {
         const sID = oEvent.getSource().getBindingContext().getProperty("ID");

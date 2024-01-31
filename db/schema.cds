@@ -42,14 +42,18 @@ entity SalesOrders : cuid, managed {
         canceled  = -1;
     };
     
+    description   : String
+    @Common.Label: '{i18n>description}';
 
 
     businessPartner  : String(10)
-    @Common.Label: '{i18n>businessPartner}';
+    @Common.Label: '{i18n>businessPartner}'
+    @mandatory;
 
 
     salesOrg         : Integer
     @Common.Label: '{i18n>salesOrg}'
+    @mandatory
     /* Input validation to only allow a range*/
     @assert.range: [
         2100,
